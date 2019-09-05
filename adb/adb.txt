@@ -1,0 +1,7 @@
+adb devices 
+adb start-server
+adb kill-server
+adb push local .. remote
+adb pull remote.. local
+adb install package
+adb uninsatll -k        // keep data and cache dir
