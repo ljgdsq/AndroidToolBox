@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
+import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
         titles.add(new Pair("TableLayout", new Intent(this, TableLayoutActivity.class)));
 
+        titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyAdapter(titles));
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
+        private TextView textView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

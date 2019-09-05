@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".layout.TableLayoutActivity"></activity>
+        <activity android:name=".sisterrun.SisterRunActivity"></activity>
+        <activity android:name=".layout.FrameLayoutActivity" />
+        <activity android:name=".layout.TableLayoutActivity" />
         <activity android:name=".layout.RelativeLayoutActivity" />
         <activity android:name=".layout.LinearLayoutActivity" />
         <activity android:name=".MainActivity">
