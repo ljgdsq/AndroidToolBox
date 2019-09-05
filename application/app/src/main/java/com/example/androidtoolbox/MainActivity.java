@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
+import com.example.androidtoolbox.layout.RelativeLayoutActivity;
+import com.example.androidtoolbox.layout.TableLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         titles.add(new Pair("LinearLayout", new Intent(this, LinearLayoutActivity.class)));
+        titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
+        titles.add(new Pair("TableLayout", new Intent(this, TableLayoutActivity.class)));
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

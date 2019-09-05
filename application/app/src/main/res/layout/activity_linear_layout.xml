@@ -29,4 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:text="TextView"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
 </LinearLayout>
