@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.androidtoolbox.layout.FrameLayoutActivity;
 import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
+import com.example.androidtoolbox.widget.TextViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
         titles.add(new Pair("TableLayout", new Intent(this, TableLayoutActivity.class)));
         titles.add(new Pair("GridLayout",new Intent(this, GridLayoutActivity.class)));
+        titles.add(new Pair("FrameLayout",new Intent(this, FrameLayoutActivity.class)));
+        titles.add(new Pair("TextView",new Intent(this, TextViewActivity.class)));
 
         titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
 
