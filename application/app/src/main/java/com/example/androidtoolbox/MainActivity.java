@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("LinearLayout", new Intent(this, LinearLayoutActivity.class)));
         titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
         titles.add(new Pair("TableLayout", new Intent(this, TableLayoutActivity.class)));
+        titles.add(new Pair("GridLayout",new Intent(this, GridLayoutActivity.class)));
 
         titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
 
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
             super(itemView);
             textView = itemView.findViewById(R.id.tv_title);
         }
+
+
     }
 
     private static class Pair {
@@ -64,6 +68,18 @@ public class MainActivity extends AppCompatActivity {
             this.intent = intent;
         }
 
+    }
+
+    class C1{
+        private int i;
+    }
+
+    class C2{
+
+        private C1 c1;
+        public void c(){
+            int i=c1.i;
+        }
     }
 
     private class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
@@ -84,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
             myViewHolder.textView.setText(dataList.get(i).title);
+
             myViewHolder.textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
