@@ -53,7 +53,7 @@ public class TextViewActivity extends AppCompatActivity {
 //        spannableString.setSpan(new ImageSpan(this,R.drawable.icon_edit),11,12,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
 
-        textViewSpannable.setText(spannableString);
+        textViewSpannable.setText(spannableString); //marquee 完全跑不起来
 
         TextView textViewMarquee=findViewById(R.id.tv_marquee);
         textViewMarquee.setTextIsSelectable(true);
