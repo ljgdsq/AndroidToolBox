@@ -18,6 +18,8 @@ import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
+import com.example.androidtoolbox.widget.ButtonActivity;
+import com.example.androidtoolbox.widget.EditTextActivity;
 import com.example.androidtoolbox.widget.TextViewActivity;
 
 import java.util.ArrayList;
@@ -35,12 +37,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //--------------------layout--------------------
         titles.add(new Pair("LinearLayout", new Intent(this, LinearLayoutActivity.class)));
         titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
         titles.add(new Pair("TableLayout", new Intent(this, TableLayoutActivity.class)));
         titles.add(new Pair("GridLayout",new Intent(this, GridLayoutActivity.class)));
         titles.add(new Pair("FrameLayout",new Intent(this, FrameLayoutActivity.class)));
+
+
+        //----------------------widget----------------------
         titles.add(new Pair("TextView",new Intent(this, TextViewActivity.class)));
+        titles.add(new Pair("EditText",new Intent(this, EditTextActivity.class)));
+        titles.add(new Pair("Button",new Intent(this, ButtonActivity.class)));
+
+
+
 
         titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
 

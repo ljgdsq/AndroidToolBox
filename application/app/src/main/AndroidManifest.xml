@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".widget.TextViewActivity"></activity>
+        <activity android:name=".widget.ButtonActivity"></activity>
+        <activity
+            android:name=".widget.EditTextActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".widget.TextViewActivity" />
         <activity android:name=".layout.GridLayoutActivity" />
         <activity android:name=".sisterrun.SisterRunActivity" />
         <activity android:name=".layout.FrameLayoutActivity" />
