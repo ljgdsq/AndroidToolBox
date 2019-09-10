@@ -1,11 +1,8 @@
 package com.example.androidtoolbox.widget;
 
-import android.content.Context;
-import android.inputmethodservice.InputMethodService;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.example.androidtoolbox.R;

@@ -4,17 +4,13 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Region;
 import android.os.SystemClock;
-import android.os.health.SystemHealthManager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
-import android.widget.ImageButton;
 
 
-public class MyImageButton extends android.support.v7.widget.AppCompatImageButton {
+public class MyImageButton extends androidx.appcompat.widget.AppCompatImageButton {
 
     private static final int FLUSH_TIME=15;
     private Paint bottomPaint;

@@ -2,11 +2,11 @@ package com.example.androidtoolbox;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +20,9 @@ import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
 import com.example.androidtoolbox.widget.EditTextActivity;
+import com.example.androidtoolbox.widget.ImageViewActivity;
+import com.example.androidtoolbox.widget.ProgressBarActivity;
+import com.example.androidtoolbox.widget.SeekBarActivity;
 import com.example.androidtoolbox.widget.TextViewActivity;
 
 import java.util.ArrayList;
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("TextView",new Intent(this, TextViewActivity.class)));
         titles.add(new Pair("EditText",new Intent(this, EditTextActivity.class)));
         titles.add(new Pair("Button",new Intent(this, ButtonActivity.class)));
+        titles.add(new Pair("ImageView",new Intent(this, ImageViewActivity.class)));
+        titles.add(new Pair("ProgressBar",new Intent(this, ProgressBarActivity.class)));
+        titles.add(new Pair("SeekBar",new Intent(this, SeekBarActivity.class)));
 
 
 

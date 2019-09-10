@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".widget.ButtonActivity"></activity>
+        <activity android:name=".widget.SeekBarActivity"></activity>
+        <activity android:name=".widget.ProgressBarActivity" />
+        <activity android:name=".widget.ImageViewActivity" />
+        <activity android:name=".widget.ButtonActivity" />
         <activity
             android:name=".widget.EditTextActivity"
             android:windowSoftInputMode="stateVisible" />
