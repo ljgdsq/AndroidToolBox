@@ -1,5 +1,6 @@
 package com.example.androidtoolbox;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -10,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.androidtoolbox.layout.FrameLayoutActivity;
@@ -18,15 +22,20 @@ import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
+import com.example.androidtoolbox.widget.AnimListViewActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
 import com.example.androidtoolbox.widget.EditTextActivity;
 import com.example.androidtoolbox.widget.ImageViewActivity;
+import com.example.androidtoolbox.widget.ListViewAdaptersActivity;
+import com.example.androidtoolbox.widget.ListViewItemClickFocusActivity;
 import com.example.androidtoolbox.widget.ProgressBarActivity;
+import com.example.androidtoolbox.widget.ScrollViewActivity;
 import com.example.androidtoolbox.widget.SeekBarActivity;
 import com.example.androidtoolbox.widget.TextViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("ImageView",new Intent(this, ImageViewActivity.class)));
         titles.add(new Pair("ProgressBar",new Intent(this, ProgressBarActivity.class)));
         titles.add(new Pair("SeekBar",new Intent(this, SeekBarActivity.class)));
+        titles.add(new Pair("ScrollView",new Intent(this, ScrollViewActivity.class)));
+        titles.add(new Pair("ListViewAdapter",new Intent(this, ListViewAdaptersActivity.class)));
+        titles.add(new Pair("AnimListView",new Intent(this, AnimListViewActivity.class)));
+        titles.add(new Pair("ListViewChildClickFocus",new Intent(this, ListViewItemClickFocusActivity.class)));
 
 
 
@@ -104,6 +117,44 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    class MyBaseAdapter extends BaseAdapter{
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
+    }
+
+
+    class MySimpleAdapter extends SimpleAdapter{
+
+        public MySimpleAdapter(Context context, List<? extends Map<String, ?>> data, int resource, String[] from, int[] to) {
+            super(context, data, resource, from, to);
+        }
+    }
+
+
+    class MyArrayAdapter extends ArrayAdapter<Pair>{
+
+        public MyArrayAdapter(@NonNull Context context, int resource, @NonNull List<Pair> objects) {
+            super(context, resource, objects);
+        }
+    }
     private class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         private List<Pair> dataList;

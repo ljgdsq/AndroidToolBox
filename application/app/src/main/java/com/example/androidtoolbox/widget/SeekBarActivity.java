@@ -45,7 +45,8 @@ public class SeekBarActivity extends AppCompatActivity {
 
         Drawable drawable = getDrawable(R.drawable.icon_edit);
 
-        Bitmap bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.icon_edit), 128, 128, true);
+        Bitmap bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.icon_edit), 64, 64, true);
+        Bitmap.Config config = bitmap.getConfig();
         SeekBar seekBar = findViewById(R.id.seekBar);
         seekBar.setThumb(new BitmapDrawable(getResources(), bitmap));
 

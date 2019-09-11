@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:id="@+id/tv_footer"
+    android:textSize="28sp"
+    android:textColor="#BEBDBD"
+    android:background="#0A0A13"
+    android:height="48dp"
+    android:text="Footer"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
