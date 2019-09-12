@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ImageView
+    android:src="@drawable/iv_lol_icon1"
+    android:id="@+id/icon"
+    android:layout_margin="4dp"
+    android:layout_width="48dp"
+    android:layout_height="48dp" />
+    <TextView
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:text="lol_hero"
+        android:id="@+id/text"
+        android:gravity="left"
+        android:textSize="24sp"
+        android:textColor="#111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

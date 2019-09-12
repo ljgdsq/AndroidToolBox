@@ -17,6 +17,11 @@ import java.util.List;
 
 public class ListViewItemClickFocusActivity extends AppCompatActivity {
 
+
+    /**
+     * 1.为抢占了控件的组件设置:android:focusable="false" EditText却不行 有问题
+     * 2.android:descendantFocusability="blocksDescendants"
+     */
     private ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +36,11 @@ public class ListViewItemClickFocusActivity extends AppCompatActivity {
         }
         listView.setAdapter(new ArrayAdapter<String>(this,R.layout.list_btn_item,R.id.text,data));
 
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(ListViewItemClickFocusActivity.this,"click:"+position,Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

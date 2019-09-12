@@ -25,9 +25,11 @@ import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.widget.AnimListViewActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
 import com.example.androidtoolbox.widget.EditTextActivity;
+import com.example.androidtoolbox.widget.GridViewActivity;
 import com.example.androidtoolbox.widget.ImageViewActivity;
 import com.example.androidtoolbox.widget.ListViewAdaptersActivity;
 import com.example.androidtoolbox.widget.ListViewItemClickFocusActivity;
+import com.example.androidtoolbox.widget.MultiItemListViewActivity;
 import com.example.androidtoolbox.widget.ProgressBarActivity;
 import com.example.androidtoolbox.widget.ScrollViewActivity;
 import com.example.androidtoolbox.widget.SeekBarActivity;
@@ -69,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("ListViewAdapter",new Intent(this, ListViewAdaptersActivity.class)));
         titles.add(new Pair("AnimListView",new Intent(this, AnimListViewActivity.class)));
         titles.add(new Pair("ListViewChildClickFocus",new Intent(this, ListViewItemClickFocusActivity.class)));
+        titles.add(new Pair("MultiTypeItemList",new Intent(this, MultiItemListViewActivity.class)));
+        titles.add(new Pair("GridView",new Intent(this, GridViewActivity.class)));
 
 
 

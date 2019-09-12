@@ -8,6 +8,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.example.androidtoolbox.R;
+import com.example.androidtoolbox.entity.Anim;
+import com.example.androidtoolbox.misc.EasyAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,5 +62,8 @@ public class ListViewAdaptersActivity extends AppCompatActivity {
 
         SimpleAdapter simpleAdapter=new SimpleAdapter(this,datas,R.layout.simple_list_item,keys,ids);
         listView3.setAdapter(simpleAdapter);
+
+
+
     }
 }

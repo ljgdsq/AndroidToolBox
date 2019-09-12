@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.androidtoolbox.R;
 import com.example.androidtoolbox.entity.Anim;
+import com.example.androidtoolbox.misc.EasyAdapter;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -66,6 +67,8 @@ public class AnimListViewActivity extends AppCompatActivity {
                 Toast.makeText(AnimListViewActivity.this, data.get(position - 1).getName(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
 //        listView.setStackFromBottom(true);
     }

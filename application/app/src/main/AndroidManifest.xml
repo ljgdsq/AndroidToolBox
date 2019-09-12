@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".widget.ListViewItemClickFocusActivity"></activity>
+        <activity android:name=".widget.SpinnerActivity"></activity>
+        <activity android:name=".widget.GridViewActivity" />
+        <activity android:name=".widget.MultiItemListViewActivity" />
+        <activity android:name=".widget.ListViewItemClickFocusActivity" />
         <activity android:name=".widget.AnimListViewActivity" />
         <activity android:name=".widget.ListViewAdaptersActivity" />
         <activity android:name=".widget.ScrollViewActivity" />
