@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".widget.ViewFlipperActivity"></activity>
+        <activity android:name=".widget.ToastActivity"></activity>
+        <activity android:name=".widget.ViewFlipperActivity" />
         <activity android:name=".widget.SpinnerActivity" />
         <activity android:name=".widget.GridViewActivity" />
         <activity android:name=".widget.MultiItemListViewActivity" />

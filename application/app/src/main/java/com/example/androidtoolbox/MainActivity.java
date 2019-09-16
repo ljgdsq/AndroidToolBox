@@ -34,6 +34,7 @@ import com.example.androidtoolbox.widget.ProgressBarActivity;
 import com.example.androidtoolbox.widget.ScrollViewActivity;
 import com.example.androidtoolbox.widget.SeekBarActivity;
 import com.example.androidtoolbox.widget.TextViewActivity;
+import com.example.androidtoolbox.widget.ToastActivity;
 import com.example.androidtoolbox.widget.ViewFlipperActivity;
 
 import java.util.ArrayList;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("MultiTypeItemList",new Intent(this, MultiItemListViewActivity.class)));
         titles.add(new Pair("GridView",new Intent(this, GridViewActivity.class)));
         titles.add(new Pair("ViewFlipper",new Intent(this, ViewFlipperActivity.class)));
+        titles.add(new Pair("Toast",new Intent(this, ToastActivity.class)));
 
 
 
