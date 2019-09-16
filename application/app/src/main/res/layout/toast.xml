@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@drawable/toast_radius_bg"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/iv_icon"
+    android:src="@drawable/icon_edit"
+    android:layout_width="64dp"
+    android:layout_height="64dp" />
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:text="Toast Hehe"
+        android:textSize="22sp"
+        android:textColor="#121D4E"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
