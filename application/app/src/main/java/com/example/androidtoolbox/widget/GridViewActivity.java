@@ -33,7 +33,7 @@ public class GridViewActivity extends AppCompatActivity {
         mData.add(new Icon(R.drawable.iv_icon_6, "图标6"));
         mData.add(new Icon(R.drawable.iv_icon_7, "图标7"));
 
-        gridView.setAdapter(new MegaAdapter<Icon>(new LinkedList<Icon>(mData),R.layout.grid_item) {
+        gridView.setAdapter(new MegaAdapter<Icon>(new ArrayList<>(mData),R.layout.grid_item) {
             @Override
             public void bindView(ViewHolder holder, Icon data) {
                 holder.setImage(R.id.icon,data.getiId());

@@ -8,14 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public abstract class MegaAdapter<T> extends BaseAdapter {
 
-    private LinkedList<T> dataList;
+    private ArrayList<T> dataList;
     private int resId;
 
-    public MegaAdapter(LinkedList<T> dataList, int resId) {
+    public MegaAdapter(ArrayList<T> dataList, int resId) {
         this.dataList = dataList;
         this.resId = resId;
     }
