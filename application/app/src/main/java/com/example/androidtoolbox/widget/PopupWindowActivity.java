@@ -3,6 +3,7 @@ package com.example.androidtoolbox.widget;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,6 +21,7 @@ import butterknife.OnClick;
 
 public class PopupWindowActivity extends AppCompatActivity {
 
+    private static final String TAG = "PopupWindowActivity";
     @BindView(R.id.button1)
     Button button1;
 
@@ -33,24 +35,25 @@ public class PopupWindowActivity extends AppCompatActivity {
     }
 
 
-    private void createPopupWindow() {
+    private void createPopupWindow(View parent) {
         View view = LayoutInflater.from(this).inflate(R.layout.popup, null);
         PopupWindow popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setAnimationStyle(R.anim.popup_in);
-
-
 //        popupWindow.setTouchable(true);
 
-        popupWindow.setTouchInterceptor((v, event) ->
-                v.performClick());
+        popupWindow.setTouchInterceptor((v, event) ->{
+            Log.d(TAG, "createPopupWindow: "+v);
+            return  false;
+        });
+//        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.CYAN));
 
-        popupWindow.showAsDropDown(view,100,0);
+        popupWindow.showAsDropDown(parent,100,0);
 
 
     }
 
     @OnClick(R.id.button1)
-    public void onViewClicked() {
-        createPopupWindow();
+    public void onViewClicked(View view) {
+        createPopupWindow(view);
     }
 }
