@@ -32,6 +32,7 @@ import com.example.androidtoolbox.widget.ListViewAdaptersActivity;
 import com.example.androidtoolbox.widget.ListViewItemClickFocusActivity;
 import com.example.androidtoolbox.widget.MultiItemListViewActivity;
 import com.example.androidtoolbox.widget.NotificationActivity;
+import com.example.androidtoolbox.widget.PopupWindowActivity;
 import com.example.androidtoolbox.widget.ProgressBarActivity;
 import com.example.androidtoolbox.widget.ScrollViewActivity;
 import com.example.androidtoolbox.widget.SeekBarActivity;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("Toast",new Intent(this, ToastActivity.class)));
         titles.add(new Pair("Notification",new Intent(this, NotificationActivity.class)));
         titles.add(new Pair("AlertDialog",new Intent(this, AlertDialogActivity.class)));
+        titles.add(new Pair("PopupWindow",new Intent(this, PopupWindowActivity.class)));
 
 
 
