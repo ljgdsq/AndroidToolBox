@@ -22,6 +22,7 @@ import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
+import com.example.androidtoolbox.widget.AlertDialogActivity;
 import com.example.androidtoolbox.widget.AnimListViewActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
 import com.example.androidtoolbox.widget.EditTextActivity;
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("ViewFlipper",new Intent(this, ViewFlipperActivity.class)));
         titles.add(new Pair("Toast",new Intent(this, ToastActivity.class)));
         titles.add(new Pair("Notification",new Intent(this, NotificationActivity.class)));
+        titles.add(new Pair("AlertDialog",new Intent(this, AlertDialogActivity.class)));
 
 
 
