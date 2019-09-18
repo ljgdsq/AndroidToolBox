@@ -40,6 +40,7 @@ import com.example.androidtoolbox.widget.SeekBarActivity;
 import com.example.androidtoolbox.widget.TextViewActivity;
 import com.example.androidtoolbox.widget.ToastActivity;
 import com.example.androidtoolbox.widget.ViewFlipperActivity;
+import com.example.androidtoolbox.widget.ViewPagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("AlertDialog",new Intent(this, AlertDialogActivity.class)));
         titles.add(new Pair("PopupWindow",new Intent(this, PopupWindowActivity.class)));
         titles.add(new Pair("Menu",new Intent(this, MenuActivity.class)));
+        titles.add(new Pair("ViewPager",new Intent(this, ViewPagerActivity.class)));
 
 
 
