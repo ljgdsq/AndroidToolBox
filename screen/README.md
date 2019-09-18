@@ -24,7 +24,7 @@ Android正是根据设备DPI值得不同，选择清晰度不同的资源使用�
 
 
 
-# 代码
+# 获取屏幕参数的代码
 ```java
 
  　　 DisplayMetrics metrics = new DisplayMetrics();
