@@ -20,7 +20,7 @@ Android正是根据设备DPI值得不同，选择清晰度不同的资源使用�
 
 5. sp：专用于设定文字大小，受dpi影响和用户的字体偏好设定影响。
 
-#px与dp的互相转换 [DisplayUtils](../application/app/src/main/java/com/example/androidtoolbox/utils/DisplayUtils.java) /application/app/src/main/java/com/example/androidtoolbox/utils/DisplayUtils.java
+# px与dp的互相转换 [DisplayUtils](../application/app/src/main/java/com/example/androidtoolbox/utils/DisplayUtils.java) /application/app/src/main/java/com/example/androidtoolbox/utils/DisplayUtils.java
 
 # 代码
 ```java
