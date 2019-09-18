@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".widget.PopupWindowActivity"></activity>
+        <activity android:name=".widget.MenuActivity" android:label="MenuActivity"> </activity>
+        <activity android:name=".widget.PopupWindowActivity" />
         <activity android:name=".widget.AlertDialogActivity" />
         <activity android:name=".widget.NotificationActivity" />
         <activity android:name=".widget.ToastActivity" />

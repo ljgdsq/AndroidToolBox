@@ -30,6 +30,7 @@ import com.example.androidtoolbox.widget.GridViewActivity;
 import com.example.androidtoolbox.widget.ImageViewActivity;
 import com.example.androidtoolbox.widget.ListViewAdaptersActivity;
 import com.example.androidtoolbox.widget.ListViewItemClickFocusActivity;
+import com.example.androidtoolbox.widget.MenuActivity;
 import com.example.androidtoolbox.widget.MultiItemListViewActivity;
 import com.example.androidtoolbox.widget.NotificationActivity;
 import com.example.androidtoolbox.widget.PopupWindowActivity;
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("Notification",new Intent(this, NotificationActivity.class)));
         titles.add(new Pair("AlertDialog",new Intent(this, AlertDialogActivity.class)));
         titles.add(new Pair("PopupWindow",new Intent(this, PopupWindowActivity.class)));
+        titles.add(new Pair("Menu",new Intent(this, MenuActivity.class)));
 
 
 

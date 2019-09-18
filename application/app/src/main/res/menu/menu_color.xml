@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="none" >
+        <item android:id="@+id/red" android:icon="@drawable/iv_lol_icon3" android:title="red" app:showAsAction="withText"/>
+        <item android:id="@+id/blue" android:icon="@drawable/ic_tur_icon" android:title="blue" app:showAsAction="ifRoom"/>
+        <item android:id="@+id/yellow" android:icon="@drawable/iv_lol_icon1" android:title="yellow" app:showAsAction="always"/>
+        <item android:id="@+id/white" android:icon="@drawable/iv_lol_icon4" android:title="white" app:showAsAction="collapseActionView"/>
+    </group>
+</menu>
