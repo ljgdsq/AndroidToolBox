@@ -22,9 +22,12 @@ import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
+import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
 import com.example.androidtoolbox.widget.AnimListViewActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
+import com.example.androidtoolbox.widget.DrawerLayout2Activity;
+import com.example.androidtoolbox.widget.DrawerLayoutActivity;
 import com.example.androidtoolbox.widget.EditTextActivity;
 import com.example.androidtoolbox.widget.GridViewActivity;
 import com.example.androidtoolbox.widget.ImageViewActivity;
@@ -87,6 +90,12 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("PopupWindow",new Intent(this, PopupWindowActivity.class)));
         titles.add(new Pair("Menu",new Intent(this, MenuActivity.class)));
         titles.add(new Pair("ViewPager",new Intent(this, ViewPagerActivity.class)));
+
+
+
+        titles.add(new Pair("DrawerLayout",new Intent(this, DrawerLayoutActivity.class)));
+        titles.add(new Pair("DrawerLayout2",new Intent(this, DrawerLayout2Activity.class)));
+        titles.add(new Pair("Test",new Intent(this, TestActivity.class)));
 
 
 

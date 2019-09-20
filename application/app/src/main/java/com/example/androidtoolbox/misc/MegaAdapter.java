@@ -1,5 +1,6 @@
 package com.example.androidtoolbox.misc;
 
+import android.graphics.Bitmap;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.androidtoolbox.utils.DisplayUtils;
+import com.example.androidtoolbox.utils.ImageUtils;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -84,7 +88,22 @@ public abstract class MegaAdapter<T> extends BaseAdapter {
                 view.setBackgroundResource(imageId);
             }
         }
+        public void setImage(int viewId, int imageId,int sizeInDP) {
+            View view = getView(viewId);
+            if (view instanceof ImageView) {
+                if (sizeInDP>0)
+                {
+                    int px=DisplayUtils.dp2px(view.getContext(),sizeInDP);
+                    Bitmap bitmap = ImageUtils.getScaledBitmap(view.getResources(), imageId, px, px);
+                   ((ImageView) view).setImageBitmap(bitmap);
+                }else {
+                    ((ImageView) view).setImageResource(imageId);
 
+                }
+            } else {
+                view.setBackgroundResource(imageId);
+            }
+        }
 
         public View getView(int viewId) {
             if (subViews.get(viewId) == null) {

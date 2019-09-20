@@ -13,13 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".test.TestActivity"></activity>
+        <activity android:name=".widget.DrawerLayout2Activity" />
+        <activity android:name=".widget.DrawerLayoutActivity" />
         <activity
             android:name=".widget.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".widget.MenuActivity"
-            android:label="MenuActivity"></activity>
+            android:label="MenuActivity" />
         <activity android:name=".widget.PopupWindowActivity" />
         <activity android:name=".widget.AlertDialogActivity" />
         <activity android:name=".widget.NotificationActivity" />
