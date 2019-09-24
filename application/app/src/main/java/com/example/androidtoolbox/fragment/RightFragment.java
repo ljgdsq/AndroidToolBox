@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,17 +47,18 @@ public class RightFragment extends Fragment {
 
     @OnClick({R.id.btn_one, R.id.btn_two, R.id.btn_three})
     public void onViewClicked(View view) {
+        Toast.makeText(getActivity(),"show",Toast.LENGTH_LONG).show();
         switch (view.getId()) {
             case R.id.btn_one:
-                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item1", Color.BLUE));
+                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item1", Color.BLUE)).commit();
                 drawerLayout.closeDrawer(Gravity.LEFT);
                 break;
             case R.id.btn_two:
-                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item2", Color.YELLOW));
+                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item2", Color.YELLOW)).commit();
                 drawerLayout.closeDrawer(Gravity.LEFT);
                 break;
             case R.id.btn_three:
-                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item3", Color.GRAY));
+                fragmentManager.beginTransaction().replace(R.id.fly_content,new ContentFragment("item3", Color.GRAY)).commit();
                 drawerLayout.closeDrawer(Gravity.LEFT);
                 break;
         }

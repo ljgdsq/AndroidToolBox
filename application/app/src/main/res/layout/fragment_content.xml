@@ -6,6 +6,7 @@
 
     <TextView
         android:id="@+id/tv_content"
+        android:textColor="#673AB7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
