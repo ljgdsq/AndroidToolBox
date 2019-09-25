@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".test.TestActivity"></activity>
+        <activity android:name=".misc.LooperActivity"></activity>
+        <activity android:name=".events.EventActivity" />
+        <activity android:name=".test.TestActivity" />
         <activity android:name=".widget.DrawerLayout2Activity" />
         <activity android:name=".widget.DrawerLayoutActivity" />
         <activity

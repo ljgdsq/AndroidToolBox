@@ -16,11 +16,13 @@ import android.widget.BaseAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.example.androidtoolbox.events.EventActivity;
 import com.example.androidtoolbox.layout.FrameLayoutActivity;
 import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
+import com.example.androidtoolbox.misc.LooperActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("PopupWindow",new Intent(this, PopupWindowActivity.class)));
         titles.add(new Pair("Menu",new Intent(this, MenuActivity.class)));
         titles.add(new Pair("ViewPager",new Intent(this, ViewPagerActivity.class)));
+        titles.add(new Pair("EventActivity",new Intent(this, EventActivity.class)));
 
 
 
@@ -97,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("DrawerLayout2",new Intent(this, DrawerLayout2Activity.class)));
         titles.add(new Pair("Test",new Intent(this, TestActivity.class)));
 
+
+        //----------------------misc----------------------
+        titles.add(new Pair("Looper",new Intent(this, LooperActivity.class)));
 
 
 
