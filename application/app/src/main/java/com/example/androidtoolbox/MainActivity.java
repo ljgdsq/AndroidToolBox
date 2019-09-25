@@ -22,7 +22,11 @@ import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
+import com.example.androidtoolbox.misc.AsyncTaskActivity;
+import com.example.androidtoolbox.misc.ConfigurationActivity;
+import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
+import com.example.androidtoolbox.misc.TouchActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
@@ -103,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
 
         //----------------------misc----------------------
         titles.add(new Pair("Looper",new Intent(this, LooperActivity.class)));
+        titles.add(new Pair("Touch",new Intent(this, TouchActivity.class)));
+        titles.add(new Pair("Configuration",new Intent(this, ConfigurationActivity.class)));
+        titles.add(new Pair("AsyncTask",new Intent(this, AsyncTaskActivity.class)));
+        titles.add(new Pair("Gesture",new Intent(this, GestureActivity.class)));
 
 
 

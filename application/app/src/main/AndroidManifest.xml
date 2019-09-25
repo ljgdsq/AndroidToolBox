@@ -4,7 +4,8 @@
     package="com.example.androidtoolbox">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".misc.LooperActivity"></activity>
+        <activity android:name=".misc.GestureActivity"></activity>
+        <activity android:name=".misc.AsyncTaskActivity" />
+        <activity
+            android:name=".misc.ConfigurationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".misc.TouchActivity" />
+        <activity android:name=".misc.LooperActivity" />
         <activity android:name=".events.EventActivity" />
         <activity android:name=".test.TestActivity" />
         <activity android:name=".widget.DrawerLayout2Activity" />
