@@ -3,4 +3,5 @@
     <string name="spinner_hero_prompt">SpinnerHeroPrompt</string>
     <string name="title_activity_view_pager">ViewPagerActivity</string>
     <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
+    <string name="title_activity_transaction_a">TransactionAActivity</string>
 </resources>

@@ -4,8 +4,9 @@
     package="com.example.androidtoolbox">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +15,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".misc.GestureActivity"></activity>
+        <service
+            android:name=".services.ForegroundService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".services.MyIntentService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".reciever.SimpleReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.androidtoolbox.reciever.SimpleReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".misc.WorkerTestActivity" />
+        <activity android:name=".misc.ServicesDemoActivity" />
+
+        <service
+            android:name=".services.MyService01"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.androidtoolbox.services.MyService01" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".misc.TransactionBActivity" />
+        <activity
+            android:name=".misc.TransactionAActivity"
+            android:label="@string/title_activity_transaction_a"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".misc.GestureActivity" />
         <activity android:name=".misc.AsyncTaskActivity" />
         <activity
             android:name=".misc.ConfigurationActivity"

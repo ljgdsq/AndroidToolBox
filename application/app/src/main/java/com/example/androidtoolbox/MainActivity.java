@@ -26,7 +26,11 @@ import com.example.androidtoolbox.misc.AsyncTaskActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
+import com.example.androidtoolbox.misc.ServicesDemoActivity;
 import com.example.androidtoolbox.misc.TouchActivity;
+import com.example.androidtoolbox.misc.TransactionAActivity;
+import com.example.androidtoolbox.misc.TransactionBActivity;
+import com.example.androidtoolbox.misc.WorkerTestActivity;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
@@ -111,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("Configuration",new Intent(this, ConfigurationActivity.class)));
         titles.add(new Pair("AsyncTask",new Intent(this, AsyncTaskActivity.class)));
         titles.add(new Pair("Gesture",new Intent(this, GestureActivity.class)));
+        titles.add(new Pair("TransactionA",new Intent(this, TransactionAActivity.class)));
+        titles.add(new Pair("TransactionB",new Intent(this, TransactionBActivity.class)));
+        titles.add(new Pair("ServiceTest",new Intent(this, ServicesDemoActivity.class)));
+        titles.add(new Pair("WorkerTest",new Intent(this, WorkerTestActivity.class)));
 
 
 

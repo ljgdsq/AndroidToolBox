@@ -40,6 +40,7 @@ public class GestureActivity extends AppCompatActivity {
     @BindView(R.id.gestureOverlayView)
     GestureOverlayView gestureOverlayView;
 
+
     private String path="mnt/sdcard/gesture";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
