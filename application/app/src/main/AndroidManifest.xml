@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,12 +17,38 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <service
-            android:name=".services.ForegroundService"
+            android:name=".services.AddressAidlService"
             android:enabled="true"
             android:exported="true"></service>
         <service
+            android:name=".services.AlarmService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".reciever.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".misc.AlarmManagerActivity" />
+
+        <service
+            android:name=".services.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
             android:name=".services.MyIntentService"
             android:exported="false" />
+        <service
+            android:name=".services.PersonAidlService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.androidtoolbox.services.PersonAidlService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
 
         <receiver
             android:name=".reciever.SimpleReceiver"

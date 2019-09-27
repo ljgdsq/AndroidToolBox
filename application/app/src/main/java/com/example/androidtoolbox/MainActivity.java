@@ -1,13 +1,19 @@
 package com.example.androidtoolbox;
 
+import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +21,16 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.androidtoolbox.aidl.IPerson;
 import com.example.androidtoolbox.events.EventActivity;
 import com.example.androidtoolbox.layout.FrameLayoutActivity;
 import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
+import com.example.androidtoolbox.misc.AlarmManagerActivity;
 import com.example.androidtoolbox.misc.AsyncTaskActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
@@ -31,6 +40,7 @@ import com.example.androidtoolbox.misc.TouchActivity;
 import com.example.androidtoolbox.misc.TransactionAActivity;
 import com.example.androidtoolbox.misc.TransactionBActivity;
 import com.example.androidtoolbox.misc.WorkerTestActivity;
+import com.example.androidtoolbox.services.PersonAidlService;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
@@ -71,6 +81,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        startService(new Intent(getApplicationContext(), PersonAidlService.class));
+
+
+        bindService(new Intent(getApplicationContext(), PersonAidlService.class), new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service) {
+                try {
+                    String s=((IPerson)service).queryName(1);
+                    Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+
+            }
+        }, Service.BIND_AUTO_CREATE);
 
         //--------------------layout--------------------
         titles.add(new Pair("LinearLayout", new Intent(this, LinearLayoutActivity.class)));
@@ -119,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("TransactionB",new Intent(this, TransactionBActivity.class)));
         titles.add(new Pair("ServiceTest",new Intent(this, ServicesDemoActivity.class)));
         titles.add(new Pair("WorkerTest",new Intent(this, WorkerTestActivity.class)));
+        titles.add(new Pair("AlarmManager",new Intent(this, AlarmManagerActivity.class)));
 
 
 
