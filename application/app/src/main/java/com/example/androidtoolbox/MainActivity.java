@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,9 +34,12 @@ import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.misc.AlarmManagerActivity;
 import com.example.androidtoolbox.misc.AsyncTaskActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
+import com.example.androidtoolbox.misc.FragmentTestActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
+import com.example.androidtoolbox.misc.OrderedBroadCastActivity;
 import com.example.androidtoolbox.misc.ServicesDemoActivity;
+import com.example.androidtoolbox.misc.TestAidlActivity;
 import com.example.androidtoolbox.misc.TouchActivity;
 import com.example.androidtoolbox.misc.TransactionAActivity;
 import com.example.androidtoolbox.misc.TransactionBActivity;
@@ -82,7 +86,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        startService(new Intent(getApplicationContext(), PersonAidlService.class));
+        /*
+        if (Build.VERSION.SDK_INT<Build.VERSION_CODES.O)
+        {
+            startService(new Intent(getApplicationContext(), PersonAidlService.class));
+
+        }else {
+            startForegroundService(new Intent(getApplicationContext(), PersonAidlService.class));
+
+        }
 
 
         bindService(new Intent(getApplicationContext(), PersonAidlService.class), new ServiceConnection() {
@@ -101,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }, Service.BIND_AUTO_CREATE);
-
+*/
         //--------------------layout--------------------
         titles.add(new Pair("LinearLayout", new Intent(this, LinearLayoutActivity.class)));
         titles.add(new Pair("RelativeLayout", new Intent(this, RelativeLayoutActivity.class)));
@@ -150,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("ServiceTest",new Intent(this, ServicesDemoActivity.class)));
         titles.add(new Pair("WorkerTest",new Intent(this, WorkerTestActivity.class)));
         titles.add(new Pair("AlarmManager",new Intent(this, AlarmManagerActivity.class)));
+        titles.add(new Pair("AIDLTest",new Intent(this, TestAidlActivity.class)));
+        titles.add(new Pair("OrderedBroadCast",new Intent(this, OrderedBroadCastActivity.class)));
+        titles.add(new Pair("FragmentTest",new Intent(this, FragmentTestActivity.class)));
 
 
 

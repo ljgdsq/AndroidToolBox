@@ -1,4 +1,4 @@
-package com.example.androidtoolbox.entity;
+package com.example.androidtoolbox;
 
 import android.os.Parcel;
 import android.os.Parcelable;
