@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".misc.SQLliteActivity"></activity>
+        <activity android:name=".misc.NetActivity"></activity>
+        <activity android:name=".misc.SQLiteActivity" />
         <activity android:name=".misc.FragmentTestActivity" />
 
         <receiver

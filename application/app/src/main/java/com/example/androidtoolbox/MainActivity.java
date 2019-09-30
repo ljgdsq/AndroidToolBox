@@ -38,6 +38,7 @@ import com.example.androidtoolbox.misc.FragmentTestActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
 import com.example.androidtoolbox.misc.OrderedBroadCastActivity;
+import com.example.androidtoolbox.misc.SQLiteActivity;
 import com.example.androidtoolbox.misc.ServicesDemoActivity;
 import com.example.androidtoolbox.misc.TestAidlActivity;
 import com.example.androidtoolbox.misc.TouchActivity;
@@ -165,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("AIDLTest",new Intent(this, TestAidlActivity.class)));
         titles.add(new Pair("OrderedBroadCast",new Intent(this, OrderedBroadCastActivity.class)));
         titles.add(new Pair("FragmentTest",new Intent(this, FragmentTestActivity.class)));
+        titles.add(new Pair("SQLiteTest",new Intent(this, SQLiteActivity.class)));
 
 
 

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.androidtoolbox.R;
 
-public class SQLliteActivity extends AppCompatActivity {
+public class NetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sqllite);
+        setContentView(R.layout.activity_net);
     }
 }
