@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".Application"
@@ -17,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".misc.NetActivity"></activity>
+        <activity android:name=".misc.XmlActivity"></activity>
+        <activity android:name=".misc.NetActivity" />
         <activity android:name=".misc.SQLiteActivity" />
         <activity android:name=".misc.FragmentTestActivity" />
 

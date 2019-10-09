@@ -37,6 +37,7 @@ import com.example.androidtoolbox.misc.ConfigurationActivity;
 import com.example.androidtoolbox.misc.FragmentTestActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
+import com.example.androidtoolbox.misc.NetActivity;
 import com.example.androidtoolbox.misc.OrderedBroadCastActivity;
 import com.example.androidtoolbox.misc.SQLiteActivity;
 import com.example.androidtoolbox.misc.ServicesDemoActivity;
@@ -45,6 +46,7 @@ import com.example.androidtoolbox.misc.TouchActivity;
 import com.example.androidtoolbox.misc.TransactionAActivity;
 import com.example.androidtoolbox.misc.TransactionBActivity;
 import com.example.androidtoolbox.misc.WorkerTestActivity;
+import com.example.androidtoolbox.misc.XmlActivity;
 import com.example.androidtoolbox.services.PersonAidlService;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
@@ -167,6 +169,8 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("OrderedBroadCast",new Intent(this, OrderedBroadCastActivity.class)));
         titles.add(new Pair("FragmentTest",new Intent(this, FragmentTestActivity.class)));
         titles.add(new Pair("SQLiteTest",new Intent(this, SQLiteActivity.class)));
+        titles.add(new Pair("SimpleNetTest",new Intent(this, NetActivity.class)));
+        titles.add(new Pair("XmlTest",new Intent(this, XmlActivity.class)));
 
 
 
