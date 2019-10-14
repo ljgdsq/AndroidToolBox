@@ -1,10 +1,12 @@
 package com.example.androidtoolbox;
 
+import android.Manifest;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Environment;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.view.LayoutInflater;
@@ -34,6 +37,7 @@ import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.misc.AlarmManagerActivity;
 import com.example.androidtoolbox.misc.AsyncTaskActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
+import com.example.androidtoolbox.misc.DownloadActivity;
 import com.example.androidtoolbox.misc.FragmentTestActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
@@ -50,6 +54,9 @@ import com.example.androidtoolbox.misc.XmlActivity;
 import com.example.androidtoolbox.services.PersonAidlService;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
+import com.example.androidtoolbox.utils.ApplicationUtil;
+import com.example.androidtoolbox.utils.LogUtil;
+import com.example.androidtoolbox.utils.PermissionUtil;
 import com.example.androidtoolbox.widget.AlertDialogActivity;
 import com.example.androidtoolbox.widget.AnimListViewActivity;
 import com.example.androidtoolbox.widget.ButtonActivity;
@@ -72,6 +79,8 @@ import com.example.androidtoolbox.widget.ToastActivity;
 import com.example.androidtoolbox.widget.ViewFlipperActivity;
 import com.example.androidtoolbox.widget.ViewPagerActivity;
 
+import java.security.Permission;
+import java.security.Permissions;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -88,7 +97,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        PermissionUtil.requestPermission(this,0, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        PermissionUtil.requestPermission(this,0, Manifest.permission.INTERNET);
 
+
+        boolean canUseDownloadManager=ApplicationUtil.canUseDownloadManager();
+
+        LogUtil.w("canUseDownloadManager"+canUseDownloadManager);
+//        ApplicationUtil.installApk("/sdcard/a.apk");
         /*
         if (Build.VERSION.SDK_INT<Build.VERSION_CODES.O)
         {
@@ -171,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("SQLiteTest",new Intent(this, SQLiteActivity.class)));
         titles.add(new Pair("SimpleNetTest",new Intent(this, NetActivity.class)));
         titles.add(new Pair("XmlTest",new Intent(this, XmlActivity.class)));
+        titles.add(new Pair("DownLoadManager",new Intent(this, DownloadActivity.class)));
 
 
 

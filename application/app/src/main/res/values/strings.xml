@@ -4,4 +4,5 @@
     <string name="title_activity_view_pager">ViewPagerActivity</string>
     <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
     <string name="title_activity_transaction_a">TransactionAActivity</string>
+    <string name="down_url" >192.168.0.1:8080/</string>
 </resources>
