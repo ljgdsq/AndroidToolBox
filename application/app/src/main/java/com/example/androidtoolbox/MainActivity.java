@@ -35,9 +35,11 @@ import com.example.androidtoolbox.layout.LinearLayoutActivity;
 import com.example.androidtoolbox.layout.RelativeLayoutActivity;
 import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.misc.AlarmManagerActivity;
+import com.example.androidtoolbox.misc.AndroidPathActivity;
 import com.example.androidtoolbox.misc.AsyncTaskActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
 import com.example.androidtoolbox.misc.DownloadActivity;
+import com.example.androidtoolbox.misc.DrawableActivity;
 import com.example.androidtoolbox.misc.FragmentTestActivity;
 import com.example.androidtoolbox.misc.GestureActivity;
 import com.example.androidtoolbox.misc.LooperActivity;
@@ -188,8 +190,9 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("SimpleNetTest",new Intent(this, NetActivity.class)));
         titles.add(new Pair("XmlTest",new Intent(this, XmlActivity.class)));
         titles.add(new Pair("DownLoadManager",new Intent(this, DownloadActivity.class)));
+        titles.add(new Pair("AndroidPath",new Intent(this, AndroidPathActivity.class)));
 
-
+        addActivity(DrawableActivity.class);
 
         titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
 
@@ -200,6 +203,15 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
+    private void addActivity(Class clazz){
+        addActivity(clazz,clazz.getSimpleName());
+    }
+
+    private void addActivity(Class clazz,String str)
+    {
+        titles.add(new Pair(str,new Intent(this,clazz)));
+
+    }
     private static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;

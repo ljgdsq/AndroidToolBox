@@ -8,21 +8,26 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <application
         android:name=".Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:networkSecurityConfig="@xml/network_security"
-        >
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".misc.DrawableActivity"></activity>
+        <activity android:name=".misc.AndroidPathActivity" />
 
-        <meta-data android:name="down_url" android:value="@string/down_url"/>
-        <activity android:name=".misc.DownloadActivity"/>
+        <meta-data
+            android:name="down_url"
+            android:value="@string/down_url" />
+
+        <activity android:name=".misc.DownloadActivity" />
         <activity android:name=".misc.XmlActivity" />
         <activity android:name=".misc.NetActivity" />
         <activity android:name=".misc.SQLiteActivity" />
@@ -36,11 +41,10 @@
             android:name=".reciever.OrderedReceiver01"
             android:enabled="true"
             android:exported="true" />
-
-        <receiver android:name=".misc.DownloadActivity$DownLoadReceiver"
+        <receiver
+            android:name=".misc.DownloadActivity$DownLoadReceiver"
             android:enabled="true"
-            android:exported="true"
-            />
+            android:exported="true" />
 
         <activity android:name=".misc.OrderedBroadCastActivity" />
         <activity android:name=".misc.TestAidlActivity" />
@@ -99,15 +103,17 @@
                 <action android:name="com.example.androidtoolbox.services.MyService01" />
             </intent-filter>
         </service>
-        <provider
-            android:authorities="com.example.androidtoolbox"
-            android:name="androidx.core.content.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true"
-            >
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/down_path"  ></meta-data>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.androidtoolbox"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/down_path" />
         </provider>
+
         <activity android:name=".misc.TransactionBActivity" />
         <activity
             android:name=".misc.TransactionAActivity"
