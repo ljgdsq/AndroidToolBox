@@ -20,7 +20,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".misc.DrawableActivity"></activity>
+        <activity android:name=".jetpack.room.RoomDataBaseActivity"></activity>
+        <activity android:name=".jetpack.LifecycleEventActivity" />
+        <activity android:name=".jetpack.DataBindingActivity" />
+        <activity android:name=".jetpack.LiveDataActivity" />
+        <activity android:name=".widget.PainterActivity" />
+        <activity android:name=".misc.BitmapActivity" />
+        <activity android:name=".misc.DrawableActivity" />
         <activity android:name=".misc.AndroidPathActivity" />
 
         <meta-data

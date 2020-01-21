@@ -1,13 +1,8 @@
 package com.example.androidtoolbox;
 
 import android.Manifest;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +10,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Environment;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.androidtoolbox.aidl.IPerson;
 import com.example.androidtoolbox.events.EventActivity;
+import com.example.androidtoolbox.jetpack.DataBindingActivity;
+import com.example.androidtoolbox.jetpack.LiveDataActivity;
+import com.example.androidtoolbox.jetpack.room.RoomDataBaseActivity;
 import com.example.androidtoolbox.layout.FrameLayoutActivity;
 import com.example.androidtoolbox.layout.GridLayoutActivity;
 import com.example.androidtoolbox.layout.LinearLayoutActivity;
@@ -37,6 +30,7 @@ import com.example.androidtoolbox.layout.TableLayoutActivity;
 import com.example.androidtoolbox.misc.AlarmManagerActivity;
 import com.example.androidtoolbox.misc.AndroidPathActivity;
 import com.example.androidtoolbox.misc.AsyncTaskActivity;
+import com.example.androidtoolbox.misc.BitmapActivity;
 import com.example.androidtoolbox.misc.ConfigurationActivity;
 import com.example.androidtoolbox.misc.DownloadActivity;
 import com.example.androidtoolbox.misc.DrawableActivity;
@@ -53,7 +47,6 @@ import com.example.androidtoolbox.misc.TransactionAActivity;
 import com.example.androidtoolbox.misc.TransactionBActivity;
 import com.example.androidtoolbox.misc.WorkerTestActivity;
 import com.example.androidtoolbox.misc.XmlActivity;
-import com.example.androidtoolbox.services.PersonAidlService;
 import com.example.androidtoolbox.sisterrun.SisterRunActivity;
 import com.example.androidtoolbox.test.TestActivity;
 import com.example.androidtoolbox.utils.ApplicationUtil;
@@ -72,6 +65,7 @@ import com.example.androidtoolbox.widget.ListViewItemClickFocusActivity;
 import com.example.androidtoolbox.widget.MenuActivity;
 import com.example.androidtoolbox.widget.MultiItemListViewActivity;
 import com.example.androidtoolbox.widget.NotificationActivity;
+import com.example.androidtoolbox.widget.PainterActivity;
 import com.example.androidtoolbox.widget.PopupWindowActivity;
 import com.example.androidtoolbox.widget.ProgressBarActivity;
 import com.example.androidtoolbox.widget.ScrollViewActivity;
@@ -81,8 +75,6 @@ import com.example.androidtoolbox.widget.ToastActivity;
 import com.example.androidtoolbox.widget.ViewFlipperActivity;
 import com.example.androidtoolbox.widget.ViewPagerActivity;
 
-import java.security.Permission;
-import java.security.Permissions;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -192,8 +184,17 @@ public class MainActivity extends AppCompatActivity {
         titles.add(new Pair("DownLoadManager",new Intent(this, DownloadActivity.class)));
         titles.add(new Pair("AndroidPath",new Intent(this, AndroidPathActivity.class)));
 
-        addActivity(DrawableActivity.class);
 
+        ///////////////////////////////////    android jetpack ////////////////////////
+
+        addActivity(LiveDataActivity.class);
+        addActivity(DataBindingActivity.class);
+        addActivity(RoomDataBaseActivity.class);
+        ///////////////////////////////////////////////////////////////////////////////
+
+        addActivity(DrawableActivity.class);
+        addActivity(BitmapActivity.class);
+        addActivity(PainterActivity.class);
         titles.add(new Pair("SisterRun",new Intent(this, SisterRunActivity.class)));
 
         recyclerView = findViewById(R.id.recyclerView);
